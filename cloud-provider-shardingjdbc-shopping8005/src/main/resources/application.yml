@@ -1,0 +1,21 @@
+server:
+  port: 8005
+
+spring:
+  application:
+    name: cloud-shardingjdbc-shopping-service
+
+eureka:
+  client:
+    fetch-registry: true
+    #表示向注册中心注册自己
+    register-with-eureka: true
+    #设置与eureka server交互的地址查询服务和注册服务都需要依赖这个地址
+    service-url:
+      #defaultZone: http://localhost:7001/eureka
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
+  instance:
+    instance-id: shardingjdbcshopping8005
+    prefer-ip-address: true  #访问路径可以显示ip地址
+
+
