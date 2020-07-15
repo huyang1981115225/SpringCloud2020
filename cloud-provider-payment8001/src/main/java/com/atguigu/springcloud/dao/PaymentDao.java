@@ -13,5 +13,9 @@ public interface PaymentDao {
 
     int create(Payment payment);
 
+    int update(Payment payment);
+
     Payment getPaymentById(@Param("id") Long id);
+
+    int delete(@Param("id") Long id);
 }

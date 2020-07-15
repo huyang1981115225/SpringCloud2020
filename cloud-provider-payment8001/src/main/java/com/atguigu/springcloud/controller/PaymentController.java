@@ -29,6 +29,7 @@ public class PaymentController {
     @Value("${server.port}")
     private String serverPort;
 
+
     /**
      * 对于注册进Eureka里的微服务，可以通过服务发现来获得该服务的信息
      */
@@ -85,6 +86,7 @@ public class PaymentController {
 
     /**
      * 演示网关 9527
+     *
      * @return
      */
     @GetMapping("/serverPort/{id}")
@@ -97,5 +99,39 @@ public class PaymentController {
     public String getPaymentLb() {
         log.info("测试getway...");
         return serverPort;
+    }
+
+    /**
+     * 基于缓存实现查询.
+     *
+     * @param limitId
+     * @return
+     */
+    @GetMapping(value = "/querycache")
+    public Payment queryWithCache(@RequestParam(value = "id") Long id) {
+        System.out.println("带缓存的查询...");
+        return paymentService.getPaymentById(id);
+    }
+
+    /**
+     * 修改同时更新缓存.
+     *
+     * @param payment
+     * @return
+     */
+    @PostMapping(value = "/updatecache")
+    public Payment updateWithCache(@RequestBody Payment payment) {
+        return paymentService.update(payment);
+    }
+
+    /**
+     * 删除同时清理缓存.
+     *
+     * @param id
+     * @return
+     */
+    @PostMapping(value = "/deletecache")
+    public void deleteWithCache(@RequestParam(value = "id") Long id) {
+        paymentService.delete(id);
     }
 }

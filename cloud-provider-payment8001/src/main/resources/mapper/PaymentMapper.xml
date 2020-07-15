@@ -16,4 +16,12 @@
         select * from payment where id = #{id};
     </select>
 
+    <update id="update" parameterType="com.atguigu.springcloud.entities.Payment">
+        update payment set serial = #{serial};
+    </update>
+    
+    <delete id="delete">
+        delete from payment  where id = #{id};
+    </delete>
+
 </mapper>

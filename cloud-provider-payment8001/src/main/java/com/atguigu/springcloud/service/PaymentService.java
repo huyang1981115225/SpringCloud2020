@@ -12,4 +12,8 @@ public interface PaymentService {
     int create(Payment payment);
 
     Payment getPaymentById(@Param("id") Long id);
+
+    Payment update(Payment payment);
+
+    int delete(@Param("id") Long id);
 }

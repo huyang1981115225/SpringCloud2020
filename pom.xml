@@ -28,6 +28,8 @@
         <module>cloud-provider-shardingjdbc8003</module>
         <module>cloud-provider-shardingjdbc-readwrite8004</module>
         <module>cloud-provider-shardingjdbc-shopping8005</module>
+        <module>cloud-springbatch-mq-master</module>
+        <module>cloud-springbatch-mq-worker</module>
     </modules>
     <packaging>pom</packaging>
 
