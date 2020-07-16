@@ -36,7 +36,6 @@
         </encoder>
     </appender>
 
-
     <!--输出到文件-->
 
     <!-- 时间滚动输出 level为 DEBUG 日志 -->
