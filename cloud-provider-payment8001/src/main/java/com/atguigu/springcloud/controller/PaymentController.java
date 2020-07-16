@@ -16,6 +16,21 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 /**
+ *      @Api()：对类进行解释说明 ags：说明该类的作用，参数是个数组，可以填多个。
+ *                               value="该参数没什么意义，在UI界面上不显示，所以不用配置"
+ *                              description = "用户基本信息操作"
+ *
+ *      @ApiOperation()：对方法进行解释说明 value="方法的用途和作用"
+ *                                            notes="方法的注意事项和备注"
+ *
+ *      @ApiModel()：解释说明实体作用 description="描述实体的作用"
+ *
+ *      @ApiModelProperty： 描述实体类的属性  value="用户名"  描述参数的意义
+ *                                              name="name"    参数的变量名
+ *                                              required=true     参数是否必选
+ *
+ *      ...还有很多自行百度
+ *
  * @author huyang
  * @date 2020/5/16 12:26
  */
