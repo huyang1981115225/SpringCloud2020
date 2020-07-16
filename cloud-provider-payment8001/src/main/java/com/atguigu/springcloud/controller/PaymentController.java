@@ -3,6 +3,10 @@ package com.atguigu.springcloud.controller;
 import com.atguigu.springcloud.entities.CommonResult;
 import com.atguigu.springcloud.entities.Payment;
 import com.atguigu.springcloud.service.PaymentService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -17,6 +21,7 @@ import java.util.concurrent.TimeUnit;
  * @author huyang
  * @date 2020/5/16 12:26
  */
+@Api(value="支付管理")
 @RestController
 // lombok 日志
 @Slf4j
@@ -107,9 +112,10 @@ public class PaymentController {
      * @param limitId
      * @return
      */
+    @ApiOperation(value = "获取支付情况")
     @GetMapping(value = "/querycache")
     public Payment queryWithCache(@RequestParam(value = "id") Long id) {
-        System.out.println("带缓存的查询...");
+        log.info("带缓存的查询...");
         return paymentService.getPaymentById(id);
     }
 
@@ -132,6 +138,7 @@ public class PaymentController {
      */
     @PostMapping(value = "/deletecache")
     public void deleteWithCache(@RequestParam(value = "id") Long id) {
+        log.info("删除的同时删除缓存...");
         paymentService.delete(id);
     }
 }
