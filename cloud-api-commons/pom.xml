@@ -26,6 +26,24 @@
             <optional>true</optional>
         </dependency>
 
+        <!--HttpClient-->
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.3.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.jcraft</groupId>
+            <artifactId>jsch</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-vfs</groupId>
+            <artifactId>commons-vfs</artifactId>
+            <version>1.0</version>
+        </dependency>
+
         <!-- https://mvnrepository.com/artifact/cn.hutool/hutool-all -->
         <dependency>
             <groupId>cn.hutool</groupId>
