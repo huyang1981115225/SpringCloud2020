@@ -30,6 +30,7 @@
         <module>cloud-provider-shardingjdbc-shopping8005</module>
         <module>cloud-springbatch-mq-master</module>
         <module>cloud-springbatch-mq-worker</module>
+        <module>cloud-webservice8020</module>
     </modules>
     <packaging>pom</packaging>
 
