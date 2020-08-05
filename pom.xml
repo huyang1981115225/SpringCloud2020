@@ -31,6 +31,9 @@
         <module>cloud-springbatch-mq-master</module>
         <module>cloud-springbatch-mq-worker</module>
         <module>cloud-webservice8020</module>
+        <module>cloud-springbatch8050</module>
+        <module>cloud-springbatch-model-master8060</module>
+        <module>cloud-springbatch-model-worker8061</module>
     </modules>
     <packaging>pom</packaging>
 

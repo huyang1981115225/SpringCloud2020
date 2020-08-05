@@ -49,6 +49,8 @@ eureka:
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.atguigu.springcloud.entities # 所有Entity别名类所在包
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl # 配合 Mybatis log plugin使用
 
 logging:
   config: classpath:logback-spring.xml
