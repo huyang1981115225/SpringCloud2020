@@ -1,0 +1,7 @@
+app:
+    id: cloud-eureka-server7002 #apollo配置中心应用名
+apollo: 
+    meta: http://192.168.254.20:8080 #apollo地址
+    bootstrap:
+        enabled: false #是否启用apollo, 不使用apollo 请剔除该包
+        namespaces: application.yml
