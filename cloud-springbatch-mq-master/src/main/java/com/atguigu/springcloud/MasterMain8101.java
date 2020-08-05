@@ -5,6 +5,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
+ * SpringBatch + RabbitMq 实现批处理和远程分区
+ *
  * @author huyang
  * @date 2020/7/13 16:12
  */
