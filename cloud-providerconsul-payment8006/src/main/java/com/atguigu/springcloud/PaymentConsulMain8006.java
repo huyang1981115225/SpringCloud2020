@@ -5,6 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
+ * SpringCloud 注册中心 Consul
+ *
  * @author huyang
  * @date 2020/5/16 17:08
  */
