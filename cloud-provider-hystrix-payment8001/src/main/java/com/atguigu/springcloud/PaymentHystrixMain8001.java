@@ -6,6 +6,7 @@ import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 /**
+ * SpringCloud  带熔断和降级的服务提供方  Hystrix
  * @author huyang
  * @date 2020/5/16 20:35
  */
