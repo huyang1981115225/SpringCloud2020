@@ -5,6 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
+ * SpringCloud alibaba nacos 测试获取nacos上配置的参数
+ *
  * @author huyang
  * @date 2020/5/17 15:37
  */
