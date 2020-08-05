@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 /**
+ * SpringCloud 网关 gateway
  * @author huyang
  * @date 2020/5/17 11:36
  */
