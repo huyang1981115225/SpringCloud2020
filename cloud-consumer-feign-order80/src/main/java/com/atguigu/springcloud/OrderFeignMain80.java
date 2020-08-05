@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
+ * Feign 远程调用消费者
  * @author huyang
  * @date 2020/5/16 19:30
  */
