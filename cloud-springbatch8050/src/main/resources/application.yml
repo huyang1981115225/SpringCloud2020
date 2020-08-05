@@ -1,0 +1,39 @@
+server:
+  port: 8050
+
+spring:
+  application:
+    name: cloud-springbatch8050
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource # 当前数据源操作类型
+    driver-class-name: com.mysql.jdbc.Driver # mysql驱动包
+    url: jdbc:mysql://127.0.0.1:3306/springbatch2020?characterEncoding=utf-8&useSSL=false
+    username: root
+    password: 123456
+
+  batch:
+    job:
+      enabled: false # 默认自动执行定义的Job(true)，改为false，需要jobLaucher.run执行
+    initialize-schema: always # spring batch在数据库里面创建默认的数据表，如果不是always则会提示相关表不存在
+
+  profiles:
+    active: dev
+
+eureka:
+  client:
+    fetch-registry: true
+    #表示向注册中心注册自己
+    register-with-eureka: true
+    #设置与eureka server交互的地址查询服务和注册服务都需要依赖这个地址
+    service-url:
+      #defaultZone: http://localhost:7001/eureka
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
+  instance:
+    instance-id: springbatch8050
+    prefer-ip-address: true  #访问路径可以显示ip地址
+
+logging:
+  config: classpath:logback-spring.xml
+
+
+
