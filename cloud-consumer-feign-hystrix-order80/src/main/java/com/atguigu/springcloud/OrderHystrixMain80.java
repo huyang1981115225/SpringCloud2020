@@ -6,6 +6,8 @@ import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
+ * 测试服务降级和服务熔断
+ *
  * @author huyang
  * @date 2020/5/16 21:09
  */
