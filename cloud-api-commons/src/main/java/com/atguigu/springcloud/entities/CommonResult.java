@@ -5,6 +5,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
+ * 公共的返回结果
+ *
  * @author huyang
  * @date 2020/5/16 11:59
  */
