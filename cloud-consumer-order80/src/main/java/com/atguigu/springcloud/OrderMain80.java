@@ -7,7 +7,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.ribbon.RibbonClient;
 
 /**
- * SpringCloud 消费者  Ribbon 负载均衡
+ * SpringCloud 消费者  Ribbon 负载均衡 自定义负载均衡规则
  *
  * @author huyang
  * @date 2020/5/16 13:19
