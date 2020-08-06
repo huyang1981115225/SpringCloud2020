@@ -8,6 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Date;
+import java.util.concurrent.TimeUnit;
+
 /**
  * @author huyang
  * @date 2020/5/16 12:26
@@ -46,8 +49,21 @@ public class PaymentController {
         }
     }
 
+    @GetMapping("/feign/timeout")
+    public String paymentFeignTimeOut() {
+        log.info(serverPort + "演示Feign超时..." + new Date());
+        try {
+            TimeUnit.SECONDS.sleep(3);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        return serverPort;
+    }
+
     /**
      * 演示网关 9527
+     *
      * @return
      */
     @GetMapping("/serverPort/{id}")
