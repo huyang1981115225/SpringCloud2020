@@ -20,10 +20,19 @@ eureka:
 
 # 设置Feign客户端超时时间（openFeign默认支持Ribbon）
 ribbon:
-#指的是建立连接所用的时间，适用于网络状况正常的情况下，两端连接所用的时间
- ConnectTimeout: 5000
-# 指的是建立连接后从服务器读取数据所用的时间
- ReadTimeout: 5000
+  ReadTimeout: 3000 # 指的是建立连接后从服务器读取数据所用的时间
+  ConnectTimeout: 8000 #指的是建立连接所用的时间，适用于网络状况正常的情况下，两端连接所用的时间
+  MaxAutoRetries: 2 #同一台实例最大重试次数,不包括首次调用
+  MaxAutoRetriesNextServer: 2 #重试负载均衡其他的实例最大重试次数,不包括首次调用
+  OkToRetryOnAllOperations: false  #是否所有操作都重试
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000 # 配置Hystrix的超时时间要大于ribbon的超时时间，否则会在接口调用还未完成的时候直接进入回调方法
 
 # Feign日志
 logging:
